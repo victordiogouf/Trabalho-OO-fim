@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.bytecode.provider">none</property>
+    <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+    <property name="hibernate.connection.url">jdbc:h2:file:./trabalho</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+    <property name="connection.username">sa</property>
+    <property name="connection.password"></property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</property>
+    <property name="hibernate.transaction.manager_lookup_class">org.hibernate.transaction.JBossTransactionManagerLookup</property>
+    <property name="hibernate.enhancer.enableAssociationManagement">false</property>
+    <property name="hibernate.enhancer.enableExtendedEnhancement">false</property>
+    <mapping class="trabalho.entities.users.Admin" />
+    <mapping class="trabalho.entities.users.Student" />
+    <mapping class="trabalho.entities.users.Teacher" />
+    <mapping class="trabalho.entities.users.User" />
+    <mapping class="trabalho.entities.AuthToken" />
+    <mapping class="trabalho.entities.Turma" />
+  </session-factory>
+</hibernate-configuration>
